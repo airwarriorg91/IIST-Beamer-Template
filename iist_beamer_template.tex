@@ -1,0 +1,130 @@
+\documentclass[hyperref={bookmarks=false},aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+
+% ---------------  Define theme and color scheme  -----------------
+\usetheme[sidebarleft]{IIST}  % 3 options: minimal, sidebarleft, sidebarright
+
+%\setbeamertemplate{footline}[frame number]
+
+% ------------  Information on the title page  --------------------
+\title[ShortTitle]
+{\bfseries{Long Full Title}}
+
+\subtitle{Subtitle}
+
+\author[ShortAuthor1 \& ShortAuthor2]
+{Author One\inst{1} \and Author Two\inst{2}}
+
+\institute[IIST]
+{
+  \inst{1}
+  Department\\
+  Indian Insitute of Space Science and Technology
+  \and
+  \inst{2}
+  Department\\
+  Indian Insitute of Space Science and Technology
+}
+
+\date[Oct, 2024]{\today}
+%------------------------------------------------------------
+
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+%------------------------------------------------------------
+
+
+\begin{document}
+
+\frame{\titlepage}  % Creates title page
+
+%---------   table of contents after title page  ------------
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents
+\end{frame}
+%---------------------------------------------------------
+
+
+\section{Section 1}
+
+%---------------------------------------------------------
+%Changing visivility of the text
+\begin{frame}
+\frametitle{Slide 1}
+Some itemized text...
+
+\begin{itemize}
+    \item<1-> First line comes first. 
+    \item<2-> Second line joins the first in next slide.
+    \item<3-> Third line joins the rest in next slide.
+\end{itemize}
+
+\end{frame}
+
+%---------------------------------------------------------
+
+
+%---------------------------------------------------------
+%\begin{frame}  % Example of the \pause command
+%This slide is to test mathematical formulas \pause
+%
+%$$E=mc^2$$ \pause
+%
+%as well as the ``pause'' functionality
+%\end{frame}
+%---------------------------------------------------------
+
+\section{Section 2}
+
+%---------------------------------------------------------
+%Highlighting text
+\begin{frame}
+\frametitle{Types of Blocks}
+
+This is a brief introduction of \alert{Blocks}.
+
+\begin{block}{Definition}
+A simple definition block.
+\end{block}
+
+\begin{alertblock}{Alert}
+A simple alert block.
+\end{alertblock}
+
+\begin{examples}
+A simple example block.
+\end{examples}
+\end{frame}
+%---------------------------------------------------------
+
+
+%---------------------------------------------------------
+%Two columns
+\begin{frame}
+\frametitle{Two Columns}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+Indian Institute of Space Science and Technology (IIST), situated at Thiruvananthapuram is a Deemed to be University under Section 3 of the UGC Act 1956. IIST functions as an autonomous body under the Department of Space, Government of India. 
+\column{0.5\textwidth}
+The institute had the enviable reputation among all educational institutions since it had Dr A.P.J. Abdul Kalam, the renowned technocrat and former President of India as its very first Chancellor.
+
+\small{(Reference: https://www.iist.ac.in/aboutus/institute)}
+
+\end{columns}
+\end{frame}
+%---------------------------------------------------------
+
+
+\end{document}
