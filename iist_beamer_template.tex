@@ -1,28 +1,33 @@
 \documentclass[hyperref={bookmarks=false},aspectratio=169]{beamer}
 \usepackage[utf8]{inputenc}
 
-% ---------------  Define theme and color scheme  -----------------
+%-------------------------Packages------------------------
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+\usepackage{amsmath}
+%---------------------------------------------------------
+% -----------Define theme and color scheme----------------
+
 \usetheme[sidebarleft]{IIST}  % 3 options: minimal, sidebarleft, sidebarright
 
-%\setbeamertemplate{footline}[frame number]
-
-% ------------  Information on the title page  --------------------
-\title[ShortTitle]
-{\bfseries{Long Full Title}}
+% ---------Information on the title page------------------
+\title[Short Title]
+{\bfseries{Long Long Long Title}}
 
 \subtitle{Subtitle}
 
-\author[ShortAuthor1 \& ShortAuthor2]
-{Author One\inst{1} \and Author Two\inst{2}}
+\author[John \& James]
+{John Doe\inst{1} \and James Clark Maxwell\inst{2}}
+
 
 \institute[IIST]
 {
   \inst{1}
-  Department\\
-  Indian Insitute of Space Science and Technology
-  \and
+  Department of Aerospace Engineering\\
+  Indian Insitute of Space Science and Technology\\
+  \vspace{0.5cm}
   \inst{2}
-  Department\\
+  Department of Avionics\\
   Indian Insitute of Space Science and Technology
 }
 
@@ -30,32 +35,29 @@
 %------------------------------------------------------------
 
 %------------------------------------------------------------
-%The next block of commands puts the table of contents at the 
-%beginning of each section and highlights the current section:
+%The next block of commands puts the table of contents at the beginning of each section and highlights the current section:
 
-\AtBeginSection[]
-{
-  \begin{frame}
-    \frametitle{Table of Contents}
-    \tableofcontents[currentsection]
-  \end{frame}
-}
+% \AtBeginSection[]
+% {
+%   \begin{frame}
+%     \frametitle{Table of Contents}
+%     \tableofcontents[currentsection]
+%   \end{frame}
+% }
 %------------------------------------------------------------
-
 
 \begin{document}
 
 \frame{\titlepage}  % Creates title page
 
-%---------   table of contents after title page  ------------
+%--------table of contents after title page---------------
 \begin{frame}
 \frametitle{Table of Contents}
 \tableofcontents
 \end{frame}
 %---------------------------------------------------------
 
-
-\section{Section 1}
+\section{Working with Texts}
 
 %---------------------------------------------------------
 %Changing visivility of the text
@@ -73,58 +75,110 @@ Some itemized text...
 
 %---------------------------------------------------------
 
-
-%---------------------------------------------------------
-%\begin{frame}  % Example of the \pause command
-%This slide is to test mathematical formulas \pause
-%
-%$$E=mc^2$$ \pause
-%
-%as well as the ``pause'' functionality
-%\end{frame}
-%---------------------------------------------------------
-
-\section{Section 2}
-
 %---------------------------------------------------------
 %Highlighting text
 \begin{frame}
-\frametitle{Types of Blocks}
-
-This is a brief introduction of \alert{Blocks}.
-
-\begin{block}{Definition}
-A simple definition block.
-\end{block}
-
-\begin{alertblock}{Alert}
-A simple alert block.
-\end{alertblock}
-
-\begin{examples}
-A simple example block.
-\end{examples}
+  \frametitle{Types of Blocks}
+  
+  This is a brief introduction of \alert{Blocks}.
+  
+  \begin{block}{Definition}
+  A simple definition block.
+  \end{block}
+  
+  \begin{alertblock}{Alert}
+  A simple alert block.
+  \end{alertblock}
+  
+  \begin{examples}
+  A simple example block.
+  \end{examples}
 \end{frame}
 %---------------------------------------------------------
 
 
+
+\section{Two Columns and Equations}
 %---------------------------------------------------------
 %Two columns
 \begin{frame}
-\frametitle{Two Columns}
+\frametitle{Two Columns with Footnote and Image}
 
 \begin{columns}
 
 \column{0.5\textwidth}
-Indian Institute of Space Science and Technology (IIST), situated at Thiruvananthapuram is a Deemed to be University under Section 3 of the UGC Act 1956. IIST functions as an autonomous body under the Department of Space, Government of India. 
+Indian Institute of Space Science and Technology (IIST), situated at Thiruvananthapuram is a Deemed to be University under Section 3 of the UGC Act 1956. IIST functions as an autonomous body under the Department of Space, Government of India \footnotemark[1]. 
+
 \column{0.5\textwidth}
-The institute had the enviable reputation among all educational institutions since it had Dr A.P.J. Abdul Kalam, the renowned technocrat and former President of India as its very first Chancellor.
-
-\small{(Reference: https://www.iist.ac.in/aboutus/institute)}
-
+\begin{figure}
+  \includegraphics[width=0.8\textwidth]{figures/Indian_Institute_of_Space_Science_and_Technology_Logo.png}
+  \caption{IIST Logo}
+  \label{fig:iistlogo}
+\end{figure}
 \end{columns}
+\footnotetext[1]{https://www.iist.ac.in/aboutus/institute}
+\end{frame}
+%---------------------------------------------------------
+
+%---------------------------------------------------------
+%Equations
+\begin{frame}
+  \frametitle{Frame with a sample equation}
+  This slide is to test mathematical formulas \pause
+  \begin{equation}
+    \begin{gathered}
+        \nabla \cdot \vec{u}\, = \,0,\\
+        \rho\left(\frac{\partial\vec{u}}{\partial t} \,+\,\vec{u} \cdot \nabla \vec{u}\right)\, =\, -\, \nabla P\, + \,\mu \,\nabla^2 \vec{u}\, +\, \rho\vec{f}
+    \end{gathered}
+  \end{equation}
 \end{frame}
 %---------------------------------------------------------
 
 
+\section{Subfigures and Tables}
+%---------------------------------------------------------
+%Subfigures
+\begin{frame}
+  \frametitle{Use of Subfigures}
+  \begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.35\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figures/Indian_Institute_of_Space_Science_and_Technology_Logo.png}
+      \caption{1st Image}
+      \label{fig:img1}
+    \end{subfigure}
+    \hspace{0.3cm}
+    \begin{subfigure}[b]{0.35\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{figures/Indian_Institute_of_Space_Science_and_Technology_Logo.png}
+      \caption{2nd Image}
+      \label{fig:img2}
+    \end{subfigure}
+  \end{figure}
+\end{frame}
+%---------------------------------------------------------
+
+%---------------------------------------------------------
+%Tables
+\begin{frame}
+  \frametitle{Use of Tables}
+  \begin{table}
+    \centering
+    \begin{tabular}{||c|c|c||}
+      \hline
+      \textbf{Heading 1} & \textbf{Heading 2} & \textbf{Heading 3}\\
+      \hline
+      Text & Text & Text \\
+      \hline
+      Text & Text & Text \\
+      \hline
+      Text & Text & Text \\
+      \hline
+    \end{tabular}
+    \caption{Sample Table}
+
+  \end{table}
+\end{frame}
+%---------------------------------------------------------
 \end{document}

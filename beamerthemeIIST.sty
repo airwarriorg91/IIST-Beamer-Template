@@ -8,7 +8,8 @@
 \usecolortheme{IIST}
 \useinnertheme{circles}
 \setbeamerfont{frametitle}{size=\Large,series=\bfseries}
-
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{footnote}{size=\tiny}
 % --------  Define behavior for theme option "minimal"  -----------
 \DeclareOptionBeamer{minimal}{
     \setbeamertemplate{frametitle}
@@ -34,7 +35,7 @@
 \newlength{\mainfooterwidth}
 \setlength{\mainfooterwidth}{\dimexpr\paperwidth - \sidebarwidth}
 
-\setbeamerfont{section in sidebar}{size=\scriptsize}
+%\setbeamerfont{section in sidebar}{size=\scriptsize}
 % --------  Define behavior for theme option "sidebarleft"  ----------- 
 \DeclareOptionBeamer{sidebarleft}{
     \useoutertheme[width=\sidebarwidth,left]{sidebar}
@@ -43,7 +44,7 @@
     \setbeamertemplate{sidebar left}{
         \vbox{
             \vspace{5pt} % Add vertical space at the top of the sidebar
-            \hspace{5pt}  % Add horizontal space on the left of the sidebar
+            \hspace{2pt}  % Add horizontal space on the left of the sidebar
             % Automatically show sections and subsections
             \beamer@currentsubsection=0
             \insertverticalnavigation{\the\sidebarHeight}
@@ -60,7 +61,7 @@
     \setbeamertemplate{sidebar right}{
         \vbox{
             \vspace{5pt} % Add vertical space at the top of the sidebar
-            \hspace{5pt}  % Add horizontal space on the left of the sidebar
+            \hspace{2pt}  % Add horizontal space on the left of the sidebar
             % Automatically show sections and subsections
             \beamer@currentsubsection=0
             \insertverticalnavigation{\the\sidebarHeight}

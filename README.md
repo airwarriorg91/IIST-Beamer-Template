@@ -18,7 +18,7 @@ This repository contains a Beamer template designed specifically for students of
 - LaTeX Distribution: Ensure you have a LaTeX distribution installed, such as [TeX Live](https://www.tug.org/texlive/) or [MiKTeX](https://miktex.org/).
 - Beamer Package: The Beamer package should be included in your LaTeX distribution (it usually is by default).
 
-### Installation
+### Usage
 
 1. Clone the repository:
 
@@ -26,6 +26,8 @@ This repository contains a Beamer template designed specifically for students of
    git clone https://github.com/airwarriorg91/iist-beamer-template.git
    cd iist-beamer-template
 
+2. Edit the `iist_beamer_template.tex`.
+3. Compile with `pdflatex` twice to obtain best results.
 
 ## Screenshots
 
